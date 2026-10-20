@@ -29,3 +29,228 @@
   color: var(--dough);
   font-size: var(--t-small);
 }
+
+/* ============================ Home: hero (SPEC-03 §5.1.1) ============================ */
+
+.hero{
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  min-height: clamp(460px, 74vh, 720px);
+  min-height: clamp(460px, 74svh, 720px);
+}
+
+.hero-photo{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Oven glow — signature gradient, warm dark from the left (§3.4) */
+.hero::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    rgba(15, 10, 8, .94) 0%,
+    rgba(15, 10, 8, .72) 45%,
+    rgba(15, 10, 8, .18) 100%);
+}
+
+@media (max-width: 700px){
+  .hero::after{
+    background: linear-gradient(90deg,
+      rgba(15, 10, 8, .95) 0%,
+      rgba(15, 10, 8, .82) 55%,
+      rgba(15, 10, 8, .5) 100%);
+  }
+}
+
+.hero-inner{
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: start;
+  gap: var(--s4);
+  padding-block: var(--s7);
+}
+
+@media (min-width: 900px){
+  .hero-inner{ padding-block: var(--s8); }
+}
+
+.hero-title{
+  margin: 0;
+  font-size: var(--t-hero);
+  line-height: .95;
+}
+
+/* One script accent word per page (§3.2) */
+.hero-title .script{
+  display: inline-block;
+  font-size: .96em;
+  line-height: 1.1;
+  color: var(--mozz);
+}
+
+.hero-tri{ width: 120px; }
+
+.hero-sub{
+  margin: 0;
+  color: var(--mozz);
+  font-size: clamp(17px, 2.4vw, 21px);
+  max-width: 34ch;
+}
+
+.hero-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+  padding-top: var(--s2);
+}
+
+/* ============================ Home: BYO split teaser (§5.1.3) ============================ */
+
+.split{
+  display: grid;
+  gap: var(--s5);
+  align-items: center;
+}
+
+@media (min-width: 860px){
+  .split{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--s7);
+  }
+}
+
+.split-photo{
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--crust);
+}
+
+.split-photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.split-text{
+  display: grid;
+  justify-items: start;
+  gap: var(--s4);
+}
+
+.split-text p{ color: var(--dough); }
+
+.split-text .dots{
+  font-size: var(--t-small);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+/* ============================ Home: catering strip (§5.1.4) ============================ */
+
+.strip{
+  background: var(--crust);
+  border-block: 1px solid var(--char);
+  padding-block: var(--s7);
+}
+
+.strip-inner{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s5);
+}
+
+.strip-text{
+  display: grid;
+  gap: var(--s2);
+}
+
+.strip-text p{ color: var(--dough); }
+
+.strip .dots{
+  font-size: var(--t-small);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+/* ============================ Home: why Cappolla's (§5.1.5) ============================ */
+
+.why-grid{
+  list-style: none;
+  display: grid;
+  gap: var(--s5);
+}
+
+@media (min-width: 760px){
+  .why-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s6); }
+}
+
+.why-item{
+  display: grid;
+  justify-items: start;
+  gap: var(--s3);
+  background: var(--crust);
+  border: 1px solid var(--char);
+  border-radius: var(--radius);
+  padding: var(--s5);
+}
+
+.why-icon{
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  color: var(--mozz);
+}
+
+.why-item p{
+  color: var(--dough);
+  font-size: var(--t-small);
+}
+
+/* ============================ Home: visit us (§5.1.6) ============================ */
+
+.visit-panel{
+  display: grid;
+  gap: var(--s5);
+  background: var(--crust);
+  border: 1px solid var(--char);
+  border-radius: var(--radius-lg);
+  padding: var(--s5);
+}
+
+@media (min-width: 760px){
+  .visit-panel{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--s6);
+    padding: var(--s6);
+  }
+}
+
+.visit-block{
+  display: grid;
+  justify-items: start;
+  gap: var(--s3);
+}
+
+.visit-block address{
+  font-style: normal;
+  color: var(--dough);
+}
+
+.visit-block p{ color: var(--dough); }
+
+.visit-block .call-number{ font-size: 22px; }

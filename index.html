@@ -45,12 +45,192 @@
 <hr class="tri">
 
 <main id="main">
-  <div class="wrap page-head">
-    <h1>Cappolla's Pizza &amp; Grill</h1>
-    <hr class="tri" aria-hidden="true">
-    <p class="page-sub">Pizza, wings and Italian trays in Garner, NC.</p>
-  </div>
-  <p class="wrap phase-note">This page is under construction &mdash; full content arrives in the next build phase.</p>
+
+  <!-- 1. Hero -->
+  <section class="hero" aria-labelledby="hero-h">
+    <img class="hero-photo" src="images/pizza.jpg" alt="Freshly baked pizza with bubbling mozzarella and pepperoni"
+         width="648" height="540" fetchpriority="high">
+    <div class="wrap hero-inner">
+      <h1 class="hero-title" id="hero-h"><span class="script">Hot</span> out of the oven</h1>
+      <hr class="tri hero-tri" aria-hidden="true">
+      <p class="hero-sub">Pizza, wings and Italian trays in Garner, NC.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="menu.html">Order online</a>
+        <a class="btn btn-secondary" href="tel:+19196614774">Call (919) 661-4774</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Quick picks -->
+  <section class="section wrap" aria-labelledby="quick-h">
+    <div class="section-head">
+      <div class="section-titles">
+        <p class="eyebrow">Straight from the menu</p>
+        <h2 id="quick-h">Quick picks</h2>
+      </div>
+      <a class="btn btn-ghost" href="menu.html">See full menu</a>
+    </div>
+
+    <div class="food-grid">
+      <!-- Popular badge: which items count as Popular awaits owner confirmation (SPEC-03 §12.4) -->
+      <article class="food-card">
+        <a class="food-photo" href="menu.html#pizza">
+          <span class="badge badge-popular">Popular</span>
+          <img src="images/pizza.jpg" alt="Deluxe pizza loaded with pepperoni, sausage and vegetables"
+               width="648" height="540" loading="lazy">
+        </a>
+        <div class="food-body">
+          <h3>Deluxe Pizza</h3>
+          <p>Pepperoni, sausage, onions, green peppers &amp; mushrooms.</p>
+          <div class="food-foot">
+            <span class="price-tag"><span class="tag-label">from</span><span>$16.99</span></span>
+            <a class="btn btn-primary btn-sm" href="menu.html#pizza">Add</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="food-card">
+        <a class="food-photo" href="menu.html#wings">
+          <img src="images/wings.jpg" alt="Crispy bone-in chicken wings tossed in sauce"
+               width="688" height="320" loading="lazy">
+        </a>
+        <div class="food-body">
+          <h3>Chicken Wings</h3>
+          <p>Bone-in, tossed in your choice of sauce.</p>
+          <div class="food-foot">
+            <span class="price-tag"><span class="tag-label">from</span><span>$36.99</span></span>
+            <a class="btn btn-primary btn-sm" href="menu.html#wings">Add</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="food-card">
+        <a class="food-photo" href="menu.html#trays">
+          <img src="images/trays.jpg" alt="Italian pasta tray fresh from the kitchen"
+               width="680" height="350" loading="lazy">
+        </a>
+        <div class="food-body">
+          <h3>Baked Ziti</h3>
+          <p>Half tray serves 8&ndash;10, full tray serves 16&ndash;20.</p>
+          <div class="food-foot">
+            <span class="price-tag"><span class="tag-label">from</span><span>$74.99</span></span>
+            <a class="btn btn-primary btn-sm" href="menu.html#trays">Add</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="food-card">
+        <a class="food-photo" href="menu.html#appetizers">
+          <img src="images/knots.jpg" alt="Golden garlic knots with parsley and garlic butter"
+               width="600" height="284" loading="lazy">
+        </a>
+        <div class="food-body">
+          <h3>Garlic Knots</h3>
+          <p>Oven-baked with garlic butter &mdash; 25 pieces.</p>
+          <div class="food-foot">
+            <span class="price-tag"><span class="tag-label">from</span><span>$12.99</span></span>
+            <a class="btn btn-primary btn-sm" href="menu.html#appetizers">Add</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 3. Build your own teaser -->
+  <section class="section wrap split" aria-labelledby="byo-h">
+    <div class="split-photo">
+      <img src="images/pizza.jpg" alt="Pizza with half pepperoni and half vegetable toppings"
+           width="648" height="540" loading="lazy">
+    </div>
+    <div class="split-text">
+      <p class="eyebrow">Build your own</p>
+      <h2 id="byo-h">Your pizza, your way</h2>
+      <p>Start with our cheese pizza, then make it yours &mdash; whole pie or half-and-half, exactly the way you like it.</p>
+      <p class="dots"><span>Half-and-half toppings</span><span>4 sauces</span><span>16 toppings</span></p>
+      <a class="btn btn-primary" href="menu.html#byo">Build your pizza</a>
+    </div>
+  </section>
+
+  <!-- 4. Catering strip -->
+  <section class="strip" aria-labelledby="strip-h">
+    <div class="wrap strip-inner">
+      <div class="strip-text">
+        <h2 id="strip-h">Feeding a crowd?</h2>
+        <p>Trays for 8 to 100+.</p>
+        <p class="dots"><span>Office lunches</span><span>Meetings</span><span>Events</span><span>Parties</span></p>
+      </div>
+      <a class="btn btn-primary" href="catering.html">Explore catering</a>
+    </div>
+  </section>
+
+  <!-- 5. Why Cappolla's (wording awaits owner confirmation — SPEC-03 §5.1) -->
+  <section class="section wrap" aria-labelledby="why-h">
+    <div class="section-head">
+      <div class="section-titles">
+        <p class="eyebrow">Why Cappolla&rsquo;s</p>
+        <h2 id="why-h">Hot. Generous. Local.</h2>
+      </div>
+    </div>
+    <ul class="why-grid">
+      <li class="why-item">
+        <svg class="why-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="13" r="4"/>
+          <path d="M12 3v2.5M12 17.5V20M3 13h2.5M18.5 13H21M5.6 6.6l1.8 1.8M16.6 17.6l1.8 1.8M18.4 6.6l-1.8 1.8M7.4 17.6l-1.8 1.8"/>
+        </svg>
+        <h3>Made fresh daily</h3>
+        <p>Dough and sauces prepped in-house every morning.</p>
+      </li>
+      <li class="why-item">
+        <svg class="why-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H11v18H5.5A2.5 2.5 0 0 1 3 18.5z"/>
+          <path d="M21 5.5A2.5 2.5 0 0 0 18.5 3H13v18h5.5a2.5 2.5 0 0 0 2.5-2.5z"/>
+        </svg>
+        <h3>Family recipes</h3>
+        <p>The sauces and standards we grew up on, unchanged.</p>
+      </li>
+      <li class="why-item">
+        <svg class="why-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/>
+          <circle cx="12" cy="10" r="2.5"/>
+        </svg>
+        <h3>Local in Garner</h3>
+        <p>On Aversboro Rd, serving our neighbors since day one.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 6. Visit us (hours await owner answer — SPEC-03 §12.1) -->
+  <section class="section wrap" aria-labelledby="visit-h">
+    <div class="section-head">
+      <div class="section-titles">
+        <p class="eyebrow">Visit us</p>
+        <h2 id="visit-h">Come see us in Garner</h2>
+      </div>
+    </div>
+    <div class="visit-panel">
+      <div class="visit-block">
+        <h3>Address</h3>
+        <address>
+          1857 Aversboro Rd<br>
+          Garner, NC 27529
+        </address>
+        <a class="btn btn-secondary btn-sm" href="https://www.google.com/maps/search/?api=1&query=1857+Aversboro+Rd%2C+Garner%2C+NC+27529" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <div class="visit-block">
+        <h3>Hours</h3>
+        <p>To be confirmed &mdash; call ahead and we&rsquo;ll pick up.</p>
+      </div>
+      <div class="visit-block">
+        <h3>Call</h3>
+        <div class="phone-row">
+          <a class="call-number" href="tel:+19196614774">(919) 661-4774</a>
+          <button class="btn btn-secondary btn-sm" type="button" data-copy="(919) 661-4774">Copy</button>
+        </div>
+        <p class="copy-feedback" role="status"></p>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
