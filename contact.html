@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — Cappolla's Pizza & Grill</title>
+<meta name="description" content="Call (919) 661-4774 or visit 1857 Aversboro Rd, Garner, NC 27529. Send us a message any time.">
+<meta name="theme-color" content="#17110E">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Lato:wght@400;700;900&family=Kaushan+Script&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Cappolla's Pizza &amp; Grill — home" width="872" height="230"
+           onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'brand-fallback',textContent:'CAPPOLLA\u2019S'}))">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-spacer"></div>
+    <div class="header-actions">
+      <a class="btn btn-primary" href="menu.html"><span class="lbl-lg">Order now</span><span class="lbl-sm">Order</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navsheet" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<hr class="tri">
+
+<main id="main">
+  <div class="wrap page-head">
+    <h1>Contact</h1>
+    <hr class="tri" aria-hidden="true">
+    <p class="page-sub">Call, visit, or send us a message — we answer the phone.</p>
+  </div>
+  <p class="wrap phase-note">This page is under construction &mdash; full content arrives in the next build phase.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h2>Visit</h2>
+        <address>
+          1857 Aversboro Rd<br>
+          Garner, NC 27529
+        </address>
+        <!-- Hours: owner answer pending (SPEC-03 §12) -->
+        <p>Hours: to be confirmed &mdash; call ahead.</p>
+        <p><a href="https://www.google.com/maps/search/?api=1&query=1857+Aversboro+Rd%2C+Garner%2C+NC+27529" target="_blank" rel="noopener">Get directions</a></p>
+      </div>
+      <div class="footer-col">
+        <h2>Call</h2>
+        <div class="phone-row">
+          <a class="call-number" href="tel:+19196614774">(919) 661-4774</a>
+          <button class="btn btn-secondary btn-sm" type="button" data-copy="(919) 661-4774">Copy</button>
+        </div>
+        <p class="copy-feedback" role="status"></p>
+      </div>
+      <div class="footer-col">
+        <h2>Follow</h2>
+        <!-- Instagram handle: owner answer pending (SPEC-03 §12) -->
+        <p>Instagram &mdash; handle to be confirmed.</p>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; Cappolla's Pizza &amp; Grill &middot; Site by meedit</p>
+  </div>
+</footer>
+
+<dialog class="nav-sheet" id="navsheet" aria-label="Site menu">
+  <div class="sheet-head">
+    <img src="images/logo.png" alt="" width="872" height="230">
+    <button class="sheet-close" type="button" data-close-sheet aria-label="Close menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+  </ul>
+  <div class="sheet-foot">
+    <a class="btn btn-primary" href="menu.html">Order now</a>
+    <a class="btn btn-secondary" href="tel:+19196614774">Call (919) 661-4774</a>
+  </div>
+</dialog>
+
+<script src="js/ui.js"></script>
+</body>
+</html>

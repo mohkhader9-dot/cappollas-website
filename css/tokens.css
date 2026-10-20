@@ -1,0 +1,72 @@
+/* Cappolla's — design tokens (SPEC-03 §3)
+   The single source of truth for color, type, space, shape and depth.
+   No component may hardcode a hex value or font stack; everything references these. */
+
+:root{
+  color-scheme: dark;
+
+  /* surfaces */
+  --oven:      #17110E;  /* page background, charred brown-black */
+  --crust:     #211814;  /* cards, panels */
+  --crust-2:   #2A1F1A;  /* raised panels, inputs */
+  --char:      #3A2C25;  /* borders, dividers */
+
+  /* text */
+  --flour:     #F6EFE8;  /* main text */
+  --dough:     #BDAEA3;  /* secondary text */
+  --ash:       #8F8076;  /* hints, captions (large text only, 18px+) */
+
+  /* brand */
+  --sauce:     #D8333D;  /* primary action: Order, Call, Add */
+  --sauce-dk:  #A8222B;  /* hover/pressed */
+  --basil:     #109A55;  /* success, "Included", vegetarian */
+  --mozz:      #EFE7DC;  /* tricolor white, focus rings */
+  --gold:      #E8B04B;  /* stars, "Popular" badge only */
+
+  /* sauces (from owner) */
+  --sauce-regular: #B23A2E;
+  --sauce-bbq:     #6B2E1F;
+  --sauce-mild:    #A65324;
+  --sauce-hot:     #8B3025;
+
+  /* typography */
+  --display: "Oswald", "Arial Narrow", sans-serif;        /* headings, prices, button labels in caps */
+  --body:    "Lato", "Helvetica Neue", Arial, sans-serif; /* everything else */
+  --script:  "Kaushan Script", "Brush Script MT", cursive; /* ONE accent word per page max */
+
+  --t-hero:  clamp(44px, 9vw, 96px);
+  --t-h1:    clamp(36px, 6vw, 60px);
+  --t-h2:    clamp(28px, 4.5vw, 44px);
+  --t-h3:    19px;
+  --t-body:  17px;
+  --t-small: 14.5px;
+  --t-label: 12px;
+  --t-price: 20px;
+
+  /* spacing */
+  --s1: 4px;  --s2: 8px;  --s3: 12px; --s4: 16px; --s5: 24px;
+  --s6: 32px; --s7: 48px; --s8: 72px; --s9: 112px;
+
+  /* shape */
+  --radius-sm: 8px;
+  --radius:    14px;
+  --radius-lg: 22px;
+  --pill:      999px;
+
+  /* depth */
+  --shadow: 0 12px 32px rgba(0,0,0,.45);
+
+  /* layout */
+  --max: 1160px;
+  --gutter: max(16px, env(safe-area-inset-left));
+  --section-gap: var(--s8);
+
+  /* motion */
+  --ease: cubic-bezier(.2, .7, .3, 1);
+  --t-fast: 150ms;
+  --t-med:  220ms;
+}
+
+@media (min-width: 900px){
+  :root{ --section-gap: var(--s9); }
+}
