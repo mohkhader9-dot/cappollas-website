@@ -50,7 +50,79 @@
     <hr class="tri" aria-hidden="true">
     <p class="page-sub">Call, visit, or send us a message — we answer the phone.</p>
   </div>
-  <p class="wrap phase-note">This page is under construction &mdash; full content arrives in the next build phase.</p>
+  <!-- 1. Reach us: phone, address, hours (hours await owner answer — SPEC-03 §12.1) -->
+  <section class="wrap section" aria-labelledby="reach-h">
+    <div class="section-head">
+      <div class="section-titles">
+        <p class="eyebrow">Reach us</p>
+        <h2 id="reach-h">Call, visit, or stop by</h2>
+      </div>
+    </div>
+    <div class="visit-panel">
+      <div class="visit-block">
+        <h3>Call</h3>
+        <div class="phone-row">
+          <a class="call-number contact-number" href="tel:+19196614774">(919) 661-4774</a>
+          <button class="btn btn-secondary btn-sm" type="button" data-copy="(919) 661-4774">Copy</button>
+        </div>
+        <p class="copy-feedback" role="status"></p>
+      </div>
+      <div class="visit-block">
+        <h3>Address</h3>
+        <address>
+          1857 Aversboro Rd<br>
+          Garner, NC 27529
+        </address>
+        <a class="btn btn-secondary btn-sm" href="https://www.google.com/maps/search/?api=1&query=1857+Aversboro+Rd%2C+Garner%2C+NC+27529" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <div class="visit-block">
+        <h3>Hours</h3>
+        <!-- Hours: owner answer pending (SPEC-03 §12.1) — placeholder, not invented -->
+        <p class="owner-note"><strong>Hours &mdash; to be confirmed by the owner.</strong> Call ahead and we&rsquo;ll pick up.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Message form — no data is sent yet (SPEC-03 §5.5, §9) -->
+  <section class="wrap section" aria-labelledby="msg-h">
+    <div class="section-head">
+      <div class="section-titles">
+        <p class="eyebrow">Send a message</p>
+        <h2 id="msg-h">Drop us a line</h2>
+      </div>
+    </div>
+    <p class="form-hint">We&rsquo;ll call you back. This form does not send data anywhere yet.</p>
+    <form id="contact-form" class="form-section" novalidate>
+      <div class="form-grid cols-2">
+        <div class="form-field">
+          <label for="k-name">Name</label>
+          <input id="k-name" name="name" autocomplete="name" required>
+          <div class="form-error" data-error-for="k-name"></div>
+        </div>
+        <div class="form-field">
+          <label for="k-phone">Phone</label>
+          <input id="k-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+          <div class="form-error" data-error-for="k-phone"></div>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="k-message">Message</label>
+        <textarea id="k-message" name="message" required></textarea>
+        <div class="form-error" data-error-for="k-message"></div>
+      </div>
+      <div>
+        <button class="btn btn-primary" type="submit">Send message</button>
+      </div>
+    </form>
+
+    <div id="contact-summary-wrap" class="form-section" style="display:none" aria-live="polite">
+      <div>
+        <h3>Thanks! We&rsquo;ll call you back.</h3>
+        <p class="form-hint">Copy the summary below to share details.</p>
+      </div>
+      <pre class="summary-box" id="contact-summary"></pre>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -105,5 +177,6 @@
 </dialog>
 
 <script src="js/ui.js"></script>
+<script src="js/contact.js"></script>
 </body>
 </html>

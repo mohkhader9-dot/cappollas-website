@@ -321,3 +321,55 @@
   font-family: var(--body);
   font-size: var(--t-small);
 }
+
+/* ============================ Owner-pending placeholders (SPEC-03 §12) ============================ */
+/* Clearly marked slots for content the owner hasn't supplied yet. Never fake facts. */
+
+.owner-note{
+  border: 1.5px dashed var(--char);
+  border-radius: var(--radius);
+  padding: var(--s4) var(--s5);
+  color: var(--dough);
+  font-size: var(--t-small);
+  line-height: 1.5;
+}
+
+.owner-note strong{ color: var(--flour); }
+
+/* Reserved slot for a photo the owner will provide */
+.photo-slot{
+  display: grid;
+  place-items: center;
+  text-align: center;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 21 / 9;
+  min-height: 180px;
+  border: 1.5px dashed var(--char);
+  border-radius: var(--radius-lg);
+  background: var(--crust);
+  padding: var(--s5);
+  color: var(--dough);
+  font-size: var(--t-small);
+}
+
+.photo-slot strong{ color: var(--flour); }
+
+/* ============================ About (§5.4) ============================ */
+
+.story-text{
+  display: grid;
+  gap: var(--s4);
+}
+
+.story-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+}
+
+/* ============================ Contact (§5.5) ============================ */
+
+.visit-block .call-number.contact-number{
+  font-size: clamp(28px, 5vw, 40px);
+}
