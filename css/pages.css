@@ -254,3 +254,70 @@
 .visit-block p{ color: var(--dough); }
 
 .visit-block .call-number{ font-size: 22px; }
+
+/* ============================ Catering (§5.3) ============================ */
+
+.planner{
+  display: grid;
+  gap: var(--s3);
+  background: var(--crust);
+  border: 1px solid var(--char);
+  border-radius: var(--radius-lg);
+  padding: var(--s5);
+}
+
+.planner-row{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s4);
+}
+
+.planner-label{
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.planner-result{
+  color: var(--dough);
+}
+
+.packages-grid{
+  display: grid;
+  gap: var(--s4);
+}
+@media (min-width: 900px){
+  .packages-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+.package-card{
+  display: grid;
+  gap: var(--s3);
+  background: var(--crust);
+  border: 1px solid var(--char);
+  border-radius: var(--radius-lg);
+  padding: var(--s5);
+}
+
+.package-card h3{
+  font-size: var(--t-h3);
+}
+
+.package-list{
+  display: grid;
+  gap: var(--s2);
+  color: var(--dough);
+}
+
+.summary-box{
+  background: var(--crust-2);
+  border: 1px solid var(--char);
+  border-radius: var(--radius);
+  padding: var(--s4);
+  color: var(--flour);
+  white-space: pre-wrap;
+  font-family: var(--body);
+  font-size: var(--t-small);
+}

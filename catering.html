@@ -50,7 +50,141 @@
     <hr class="tri" aria-hidden="true">
     <p class="page-sub">Office lunches · Meetings · Events · Parties</p>
   </div>
-  <p class="wrap phase-note">This page is under construction &mdash; full content arrives in the next build phase.</p>
+
+  <section class="wrap" aria-labelledby="planner-title">
+    <div class="planner">
+      <div>
+        <h2 id="planner-title" class="t-h2">Guest planner</h2>
+        <p class="form-hint">Use the stepper to estimate how many trays you'll need.</p>
+      </div>
+      <div class="planner-row">
+        <span class="planner-label">Planning for</span>
+        <div class="stepper" role="group" aria-label="Number of guests">
+          <button type="button" id="guests-dec" aria-label="Decrease guests by 5">−</button>
+          <input id="guests" type="number" inputmode="numeric" min="1" max="500" value="40" aria-describedby="planner-result">
+          <button type="button" id="guests-inc" aria-label="Increase guests by 5">+</button>
+        </div>
+        <span class="planner-label">guests</span>
+      </div>
+      <div class="planner-result" id="planner-result" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="wrap section-gap" aria-labelledby="packages-title">
+    <div class="section-head">
+      <h2 id="packages-title" class="t-h2">Packages</h2>
+      <hr class="tri" aria-hidden="true">
+      <p class="section-sub">Trays, wings and salads — mix to fit your event. Prices per menu guide.</p>
+    </div>
+    <div class="packages-grid">
+      <article class="package-card">
+        <h3>Office Lunch for 10</h3>
+        <ul class="package-list">
+          <li>2 Half Trays (mix of favorites)</li>
+          <li>25 Wings (your choice of sauce)</li>
+          <li>Garden Salad Half Tray</li>
+        </ul>
+        <p class="form-hint">Suggested for light lunches.</p>
+      </article>
+      <article class="package-card">
+        <h3>Party for 25</h3>
+        <ul class="package-list">
+          <li>3 Full Trays (mix of favorites)</li>
+          <li>50 Wings (your choice of sauce)</li>
+          <li>Greek Salad Full Tray</li>
+        </ul>
+        <p class="form-hint">Great for meetings and parties.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap section-gap" aria-labelledby="request-title">
+    <div class="section-head">
+      <h2 id="request-title" class="t-h2">Catering request form</h2>
+      <hr class="tri" aria-hidden="true">
+      <p class="section-sub">Send your details — we'll call you to confirm. This form does not send data anywhere yet.</p>
+    </div>
+    <form id="catering-form" class="form-section" novalidate>
+      <div class="form-grid cols-2">
+        <div class="form-field">
+          <label for="c-name">Name</label>
+          <input id="c-name" name="name" autocomplete="name" required>
+          <div class="form-error" data-error-for="c-name"></div>
+        </div>
+        <div class="form-field">
+          <label for="c-phone">Phone</label>
+          <input id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+          <div class="form-error" data-error-for="c-phone"></div>
+        </div>
+        <div class="form-field">
+          <label for="c-email">Email</label>
+          <input id="c-email" name="email" type="email" inputmode="email" autocomplete="email">
+          <div class="form-error" data-error-for="c-email"></div>
+        </div>
+        <div class="form-field">
+          <label for="c-guests">Number of guests</label>
+          <input id="c-guests" name="guests" type="number" min="1" inputmode="numeric" required>
+          <div class="form-error" data-error-for="c-guests"></div>
+        </div>
+        <div class="form-field">
+          <label for="c-date">Event date</label>
+          <input id="c-date" name="event_date" type="date" required>
+          <div class="form-error" data-error-for="c-date"></div>
+        </div>
+        <div class="form-field">
+          <label for="c-time">Event time</label>
+          <input id="c-time" name="event_time" type="time" required>
+          <div class="form-error" data-error-for="c-time"></div>
+        </div>
+        <div class="form-field">
+          <label for="c-method">Pickup or delivery</label>
+          <select id="c-method" name="pickup_or_delivery" required>
+            <option value="" selected disabled>Select one</option>
+            <option value="pickup">Pickup</option>
+            <option value="delivery">Delivery</option>
+          </select>
+          <div class="form-hint">Delivery area/minimum order to be confirmed by owner.</div>
+          <div class="form-error" data-error-for="c-method"></div>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="c-notes">Notes</label>
+        <textarea id="c-notes" name="notes" placeholder="Tray preferences, sauces, special instructions"></textarea>
+      </div>
+      <div>
+        <button class="btn btn-primary" type="submit">Request catering</button>
+      </div>
+    </form>
+
+    <div id="catering-summary-wrap" class="form-section" style="display:none" aria-live="polite">
+      <div>
+        <h3>Thanks! We'll call you to confirm.</h3>
+        <p class="form-hint">Copy the summary below to share details.</p>
+      </div>
+      <pre class="summary-box" id="catering-summary"></pre>
+    </div>
+  </section>
+
+  <section class="wrap section-gap" aria-labelledby="faq-title">
+    <div class="section-head">
+      <h2 id="faq-title" class="t-h2">FAQ</h2>
+      <hr class="tri" aria-hidden="true">
+    </div>
+    <div class="form-section">
+      <div>
+        <h3>How much notice do you need?</h3>
+        <p class="form-hint">To be confirmed by the owner (recommend calling as early as possible for large orders).</p>
+      </div>
+      <div>
+        <h3>Do you deliver?</h3>
+        <p class="form-hint">To be confirmed by the owner — area and minimum order pending.</p>
+      </div>
+      <div>
+        <h3>Is there a minimum order?</h3>
+        <p class="form-hint">To be confirmed by the owner.</p>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -105,5 +239,6 @@
 </dialog>
 
 <script src="js/ui.js"></script>
+<script src="js/catering.js"></script>
 </body>
 </html>

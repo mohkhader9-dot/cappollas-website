@@ -512,6 +512,31 @@
 
 .footer-bottom .ash{ color: var(--ash); }
 
+/* Stepper (§4) */
+.stepper{ display: inline-flex; align-items: center; border: 1.5px solid var(--char); border-radius: var(--pill); background: var(--crust-2); overflow: hidden; }
+.stepper button{ width: 44px; height: 44px; border: 0; background: none; color: var(--flour); font-size: 22px; cursor: pointer; }
+.stepper button:hover{ background: var(--crust); }
+.stepper input{ width: 56px; text-align: center; background: none; border: 0; color: var(--flour); font-weight: 700; font-variant-numeric: tabular-nums; font-family: var(--body); }
+.stepper input::-webkit-inner-spin-button, .stepper input::-webkit-outer-spin-button{ -webkit-appearance: none; margin: 0; }
+.stepper input[type=number]{ -moz-appearance: textfield; appearance: textfield; }
+
+/* Form fields (§4) */
+.form-grid{ display: grid; gap: var(--s4); }
+@media (min-width: 720px){ .form-grid.cols-2{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
+.form-field{ display: grid; gap: var(--s2); }
+.form-field label{ font-family: var(--display); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: 13px; color: var(--flour); }
+.form-field input,
+.form-field select,
+.form-field textarea{ width: 100%; min-height: 48px; background: var(--crust-2); color: var(--flour); border: 1.5px solid var(--char); border-radius: var(--radius-sm); padding: 10px 12px; font-family: var(--body); font-size: 16px; }
+.form-field textarea{ min-height: 110px; resize: vertical; }
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus{ outline: 2px solid var(--mozz); outline-offset: 2px; border-color: transparent; }
+.form-hint{ color: var(--dough); font-size: var(--t-small); }
+.form-error{ color: var(--sauce); font-size: var(--t-small); }
+.form-section{ display: grid; gap: var(--s5); background: var(--crust); border: 1px solid var(--char); border-radius: var(--radius-lg); padding: var(--s5); }
+@media (min-width: 900px){ .form-section{ padding: var(--s6); } }
+
 @media (min-width: 768px){
   .footer-cols{
     grid-template-columns: repeat(3, 1fr);
